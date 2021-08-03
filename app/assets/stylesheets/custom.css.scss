@@ -1,0 +1,57 @@
+@import "bootstrap/scss/bootstrap";
+
+.navbar {
+  background-color: Grey !important;
+}
+
+.navbar-brand {
+  font-size: 3rem;
+}
+
+.nav-link {
+  color: yellow;
+}
+
+h1 {
+  color: white;
+}
+
+// #home-container {
+//   margin-top: 25px;
+// }
+
+.jumbotron {
+  background-image: asset-url("black-bg.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 80vh;
+}
+
+.description {
+  margin-top: 30px;
+  color: white;
+}
+html,
+body {
+  height: 100%;
+}
+
+#page-content {
+  flex: 1 0 auto;
+  background-color: lightgrey;
+}
+
+#sticky-footer {
+  flex-shrink: none;
+}
+
+#card-top {
+  background-color: #17a2b8 !important;
+}
+#card-bottom {
+  background-color: #17a2b8 !important;
+}
+.card-bottom-font {
+  color: white;
+}
