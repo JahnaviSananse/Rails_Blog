@@ -1,29 +1,33 @@
-  <h2 class="text-center"><%= @article.title %></h2>
- 		<div class="container">
-			<div class="row justify-content-md-center">
-      	<div class="col-8">
- 					<div class= "btn"> 
-						<%= link_to 'Create new Article', new_article_path, class: "text-info"%> 
-					</div>
-					<div class="card text-center shadow mb-5 bg-white rounded">
-      			<div class="card-header font-italic" id="card-top">
-							<%= @article.user.username if @article.user %>
-							<%= link_to gravatar_for(@article.user), user_path(@article.user) %>
-      			</div>
-      			<div class="card-body">
-        			<div class="card-text text-left"> <%= simple_format(@article.description)%>  </div>
-							<%# <a href="#" class="btn btn-outline-success"> View </a>
+  
+<h2 class="text-center"><%= @article.title %></h2>
+<div class="container">
+  <div class="row justify-content-md-center">
+    <div class="col-8">
+      <div class= "btn">
+        <%= link_to 'Create new Article', new_article_path, class: "text-info"%>
+      </div>
+      <div class="card text-center shadow mb-5 bg-white rounded">
+        <div class="card-header font-italic" id="card-top">
+          <%= @article.user.username if @article.user %>
+          <%= link_to gravatar_for(@article.user), user_path(@article.user) %>
+        </div>
+        <div class="card-body">
+          <div class="card-text text-left"> <%= simple_format(@article.description)%>  </div>
+          <%# <a href="#" class="btn btn-outline-success"> View </a>
 							<a href="#" class="btn btn-outline-info"> Edit </a>
 							<a href="#" class="btn btn-outline-danger"> Delete </a> %>
-							<%= link_to "Edit", edit_article_path(@article), class: "btn btn-outline-info" %>
-							<%= link_to "Delete", article_path(@article), class: "btn btn-outline-danger", method: :delete, data: {confirm: "Are you sure?"} %>
-      			</div>
-      			<div class="card-footer text-muted" id="card-bottom">
-							<small> Created <%= time_ago_in_words(@article.created_at) %>  ago, Edited
-							<%= time_ago_in_words(@article.updated_at) %> ago </small>
-      			</div>
-					</div>
-				<%= link_to '[ Cancel and return to articles listing ]', articles_path, class: "text-info" %>
-   		</div>
-		</div>
-  </div>	
+          <% if logged_in? && @article.user == current_user %>
+
+            <%= link_to "Edit", edit_article_path(@article), class: "btn btn-outline-info" %>
+            <%= link_to "Delete", article_path(@article), class: "btn btn-outline-danger", method: :delete, data: {confirm: "Are you sure?"} %>
+          <%end%>
+        </div>
+        <div class="card-footer text-muted" id="card-bottom">
+          <small> Created <%= time_ago_in_words(@article.created_at) %>  ago, Edited
+            <%= time_ago_in_words(@article.updated_at) %> ago </small>
+        </div>
+      </div>
+      <%= link_to '[ Cancel and return to articles listing ]', articles_path, class: "text-info" %>
+    </div>
+  </div>
+</div>
