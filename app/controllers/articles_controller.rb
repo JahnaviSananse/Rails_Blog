@@ -4,7 +4,7 @@ class ArticlesController < ApplicationController
   def show; end
 
   def index
-    @articles = Article.all
+    @articles = Article.paginate(page: params[:page], per_page: 5)
   end
 
   def new
@@ -16,7 +16,7 @@ class ArticlesController < ApplicationController
   def create
     # render plain: params[:article]
     @article = Article.new(article_param)
-    @article.user = User.first
+    @article.user = current_user
     if @article.save
       flash[:notice] = 'Article was created successfully.'
       redirect_to @article       # redirect_to article_path(@article)
