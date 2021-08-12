@@ -1,4 +1,3 @@
-  
 <h2 class="text-center"><%= @article.title %></h2>
 <div class="container">
   <div class="row justify-content-md-center">
@@ -16,7 +15,7 @@
           <%# <a href="#" class="btn btn-outline-success"> View </a>
 							<a href="#" class="btn btn-outline-info"> Edit </a>
 							<a href="#" class="btn btn-outline-danger"> Delete </a> %>
-          <% if logged_in? && @article.user == current_user %>
+          <% if logged_in? && (@article.user == current_user || current_user.admin?) %>
 
             <%= link_to "Edit", edit_article_path(@article), class: "btn btn-outline-info" %>
             <%= link_to "Delete", article_path(@article), class: "btn btn-outline-danger", method: :delete, data: {confirm: "Are you sure?"} %>
