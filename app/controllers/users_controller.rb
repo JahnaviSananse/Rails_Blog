@@ -6,12 +6,7 @@ class UsersController < ApplicationController
   end
 
   def show
-<<<<<<< HEAD
-    @user = User.find(params[:id])
     @articles = @user.articles.paginate(page: params[:page], per_page: 5)
-=======
-    @articles = @user.articles
->>>>>>> features/log_in_out
   end
 
   def index

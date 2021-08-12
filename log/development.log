@@ -22545,3 +22545,102 @@ Entrypoint src/application = js/src/application-87b7e3a6ebf84ef32a2f.js js/src/a
 Completed 200 OK in 5975ms (Views: 5971.2ms | ActiveRecord: 0.0ms | Allocations: 38191)
 
 
+Started GET "/" for ::1 at 2021-08-06 21:31:31 +0530
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.0ms | Allocations: 357)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.8ms | Allocations: 472)
+  Rendered layouts/_message.html.erb (Duration: 0.5ms | Allocations: 193)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 151)
+  Rendered layout layouts/application.html.erb (Duration: 52.9ms | Allocations: 28514)
+Completed 200 OK in 61ms (Views: 55.0ms | ActiveRecord: 0.0ms | Allocations: 31083)
+
+
+Started GET "/" for ::1 at 2021-08-06 21:31:32 +0530
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.4ms | Allocations: 73)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.3ms | Allocations: 158)
+  Rendered layouts/_message.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 52)
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | Allocations: 10998)
+Completed 200 OK in 17ms (Views: 15.7ms | ActiveRecord: 0.0ms | Allocations: 11382)
+
+
+Started GET "/statuses/new" for ::1 at 2021-08-12 14:36:33 +0530
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/statuses/new"):
+  
+Started GET "/" for ::1 at 2021-08-12 14:36:40 +0530
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.8ms | Allocations: 240)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.8ms | Allocations: 474)
+  Rendered layouts/_message.html.erb (Duration: 0.4ms | Allocations: 193)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 151)
+  Rendered layout layouts/application.html.erb (Duration: 49.2ms | Allocations: 28410)
+Completed 200 OK in 55ms (Views: 50.7ms | ActiveRecord: 0.0ms | Allocations: 30350)
+
+
+Started GET "/" for ::1 at 2021-08-12 14:36:41 +0530
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.4ms | Allocations: 73)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.3ms | Allocations: 158)
+  Rendered layouts/_message.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 52)
+  Rendered layout layouts/application.html.erb (Duration: 17.0ms | Allocations: 10998)
+Completed 200 OK in 19ms (Views: 17.6ms | ActiveRecord: 0.0ms | Allocations: 11383)
+
+
+Started GET "/signup" for ::1 at 2021-08-12 14:36:47 +0530
+  
+SyntaxError (/home/jahnavi/Documents/ROR/todo/app/controllers/users_controller.rb:9: syntax error, unexpected <<
+<<<<<<< HEAD
+^~
+/home/jahnavi/Documents/ROR/todo/app/controllers/users_controller.rb:12: syntax error, unexpected ===, expecting `end'
+=======
+^~~
+/home/jahnavi/Documents/ROR/todo/app/controllers/users_controller.rb:14: syntax error, unexpected >>, expecting `end'
+>>>>>>> features/log_in_out
+^~
+):
+  
+app/controllers/users_controller.rb:9: syntax error, unexpected <<
+app/controllers/users_controller.rb:12: syntax error, unexpected ===, expecting `end'
+app/controllers/users_controller.rb:14: syntax error, unexpected >>, expecting `end'
+app/controllers/users_controller.rb:9: syntax error, unexpected <<
+app/controllers/users_controller.rb:12: syntax error, unexpected ===, expecting `end'
+app/controllers/users_controller.rb:14: syntax error, unexpected >>, expecting `end'
+app/controllers/users_controller.rb:9: syntax error, unexpected <<
+app/controllers/users_controller.rb:12: syntax error, unexpected ===, expecting `end'
+app/controllers/users_controller.rb:14: syntax error, unexpected >>, expecting `end'
+Started GET "/signup" for ::1 at 2021-08-12 14:37:43 +0530
+Processing by UsersController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:5:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.4ms | Allocations: 213)
+  Rendered users/_form.html.erb (Duration: 7.3ms | Allocations: 3306)
+  Rendered users/new.html.erb within layouts/application (Duration: 8.2ms | Allocations: 3615)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.3ms | Allocations: 157)
+  Rendered layouts/_message.html.erb (Duration: 0.2ms | Allocations: 50)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 52)
+  Rendered layout layouts/application.html.erb (Duration: 18.1ms | Allocations: 14802)
+Completed 200 OK in 33ms (Views: 19.0ms | ActiveRecord: 0.8ms | Allocations: 21462)
+
+
